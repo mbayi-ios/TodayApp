@@ -14,7 +14,7 @@ extension ReminderViewController {
         case viewNote
         case viewTime
         case viewTitle
-        
+
         var imageName: String? {
             switch self {
             case .viewDate: return "calendar.circle"
@@ -23,13 +23,13 @@ extension ReminderViewController {
             default: return nil
             }
         }
-        
+
         var image: UIImage? {
             guard let imageName = imageName else  { return nil }
             let configuration = UIImage.SymbolConfiguration(textStyle: .headline)
             return UIImage(systemName: imageName,withConfiguration: configuration)
         }
-        
+
         var textStyle: UIFont.TextStyle {
             switch self {
             case .viewTitle: return .headline
